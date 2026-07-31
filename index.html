@@ -433,7 +433,7 @@
                             </div>
                             <div>
                                 <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="+91 98765 43210" required>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="+977 98020 59652" required>
                             </div>
                         </div>
                         <div class="mb-6">
@@ -592,36 +592,44 @@
             // Disable button and show loading state
             submitBtn.disabled = true;
             const originalContent = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Preparing Email...';
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending Request...';
 
-            // Construct mailto link with customer data
-            const emailTo = "info@sahanidigitalcable.com.np";
-            const subject = encodeURIComponent("New Connection Request from " + name);
-            const body = encodeURIComponent(
-                "Customer Details for New Connection:\n\n" +
-                "Name: " + name + "\n" +
-                "Phone: " + phone + "\n" +
-                "Service Interested: " + service + "\n" +
-                "Message: " + message
-            );
-            
-            // Trigger email client
-            window.location.href = "mailto:" + emailTo + "?subject=" + subject + "&body=" + body;
-
-            // Simulate UI success after a short delay
-            setTimeout(() => {
+            // Use FormSubmit.co API to send email in the background
+            fetch("https://formsubmit.co/ajax/info@sahanidigitalcable.com.np", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    _subject: "New Connection Request from " + name,
+                    Name: name,
+                    Phone: phone,
+                    Service_Interested: service,
+                    Message: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Success UI changes
                 form.reset();
                 form.classList.add('hidden');
                 successMsg.classList.remove('hidden');
                 
-                // Reset form after a few seconds
+                // Reset form after 5 seconds
                 setTimeout(() => {
                     successMsg.classList.add('hidden');
                     form.classList.remove('hidden');
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalContent;
                 }, 5000);
-            }, 1000);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalContent;
+                alert("Sorry, there was an error sending your request. Please try calling us directly.");
+            });
         }
 
         // Active link highlighting on scroll
@@ -649,4 +657,4 @@
         });
     </script>
 </body>
-  </html>
+    </html>

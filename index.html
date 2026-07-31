@@ -60,7 +60,10 @@
         <div class="max-w-3xl mx-auto px-4 bg-white p-10 rounded-3xl shadow-xl">
             <h2 class="text-3xl font-bold mb-6">Send us a Message</h2>
             <form id="contactForm" action="https://formsubmit.co/a37e0199f2949b9a38249853debbbd76" method="POST">
+                <!-- Security & Redirection -->
+                <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://sahanidigitalcable.com.np/">
                 
                 <!-- Hidden fields to collect IP and Location data -->
                 <input type="hidden" name="ip_address" id="ip_address">

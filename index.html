@@ -1,4 +1,4 @@
-<!DOCTYPE<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,36 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1E40AF',
-                        secondary: '#F59E0B',
-                        dark: '#111827',
-                        light: '#F3F4F6',
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { primary: '#1E40AF', secondary: '#F59E0B', dark: '#111827', light: '#F3F4F6' } } } }
     </script>
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
 <body class="bg-light text-gray-800 antialiased">
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-primary/95 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="bg-secondary text-white p-2 rounded-lg">
-                    <i class="fa-solid fa-wifi text-xl"></i>
-                </div>
-                <div>
-                    <span class="font-bold text-2xl text-white block">SAHANI</span>
-                    <span class="text-xs text-gray-300 uppercase tracking-widest">Digital Cable</span>
-                </div>
+                <div class="bg-secondary text-white p-2 rounded-lg"><i class="fa-solid fa-wifi text-xl"></i></div>
+                <div><span class="font-bold text-2xl text-white block">SAHANI</span><span class="text-xs text-gray-300 uppercase tracking-widest">Digital Cable</span></div>
             </div>
             <div class="hidden md:flex items-center space-x-6 text-white">
                 <a href="#home" class="hover:text-secondary">Home</a>
@@ -53,7 +35,7 @@
         <p class="text-xl mb-10 opacity-90">Ultra-fast fiber internet and premium digital entertainment.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a href="tel:+9779802059652" class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg">Call Now</a>
-            <a href="https://wa.me/9779802059652" class="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg">Chat on WhatsApp</a>
+            <a href="https://wa.me/9779802059652" class="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg">WhatsApp Chat</a>
         </div>
         <p class="mt-4 text-sm text-blue-200">Direct call or text on WhatsApp for instant setup!</p>
     </section>
@@ -63,7 +45,6 @@
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Our Internet Plans</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Plans List -->
                 <div class="bg-gray-50 p-8 rounded-2xl border">
                     <h3 class="text-xl font-bold">SDC Basic</h3>
                     <p class="text-3xl font-bold my-4">Rs. 800<span class="text-sm font-normal">/mo</span></p>
@@ -102,9 +83,10 @@
     <section id="contact" class="py-20 bg-light">
         <div class="max-w-3xl mx-auto px-4 bg-white p-10 rounded-3xl shadow-xl">
             <h2 class="text-3xl font-bold mb-6">Send us a Message</h2>
-            <form action="https://formsubmit.co/info@sahanidigitalcable.com.np" method="POST">
+            <form action="https://formsubmit.co/a37e0199f2949b9a38249853debbbd76" method="POST">
                 <!-- IP Tracking Hidden Field -->
                 <input type="hidden" name="ip_address" id="ip_address">
+                <input type="hidden" name="_subject" value="New Connection Request!">
                 
                 <div class="mb-4">
                     <label class="block mb-2 font-medium">Full Name</label>
@@ -126,8 +108,13 @@
         </div>
     </section>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/9779802059652" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-2xl z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
     <script>
-        // Fetch User IP
+        // Fetch User IP automatically
         fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
             .then(data => {

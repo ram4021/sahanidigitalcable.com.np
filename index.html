@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahani Digital Cable | High-Speed Internet & TV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF', // Blue-800
+                        secondary: '#F59E0B', // Amber-500
+                        dark: '#111827', // Gray-900
+                        light: '#F3F4F6', // Gray-100
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-pattern {
+            background-color: #1E40AF;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-light text-gray-800 antialiased selection:bg-secondary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="bg-secondary text-white p-2 rounded-lg">
+                        <i class="fa-solid fa-wifi text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-2xl text-white tracking-tight leading-none block" id="logo-text-1">SAHANI</span>
+                        <span class="text-xs font-semibold text-gray-300 tracking-widest uppercase leading-none block" id="logo-text-2">Digital Cable</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-secondary font-medium transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-white hover:text-secondary font-medium transition-colors">About Us</a>
+                    <a href="#services" class="nav-link text-white hover:text-secondary font-medium transition-colors">Services</a>
+                    <a href="#plans" class="nav-link text-white hover:text-secondary font-medium transition-colors">Plans</a>
+                    <a href="#contact" class="bg-secondary hover:bg-yellow-600 text-white px-6 py-2 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-secondary focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark bg-opacity-95 backdrop-blur-md absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#home" class="mobile-link block px-3 py-3 text-base font-medium text-white hover:text-secondary hover:bg-gray-800 rounded-md">Home</a>
+                <a href="#about" class="mobile-link block px-3 py-3 text-base font-medium text-white hover:text-secondary hover:bg-gray-800 rounded-md">About Us</a>
+                <a href="#services" class="mobile-link block px-3 py-3 text-base font-medium text-white hover:text-secondary hover:bg-gray-800 rounded-md">Services</a>
+                <a href="#plans" class="mobile-link block px-3 py-3 text-base font-medium text-white hover:text-secondary hover:bg-gray-800 rounded-md">Plans</a>
+                <a href="#contact" class="mobile-link block px-3 py-3 mt-4 text-base font-semibold text-white bg-secondary hover:bg-yellow-600 rounded-md mx-4">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern min-h-screen flex items-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-blue-900/80 z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col md:flex-row items-center justify-between gap-12">
+            <!-- Text Content -->
+            <div class="md:w-1/2 text-center md:text-left mt-10 md:mt-0">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-semibold mb-6 border border-white/20 backdrop-blur-sm">
+                    🚀 Ultra-Fast Fiber Internet
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Connect to the Future with <span class="text-secondary">Sahani</span>
+                </h1>
+                <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-lg mx-auto md:mx-0">
+                    Experience seamless streaming, lag-free gaming, and crystal-clear digital TV with our reliable fiber-optic network.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#plans" class="bg-secondary hover:bg-yellow-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center">
+                        View Our Plans
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-full font-bold text-lg transition-all text-center">
+                        Get Connected
+                    </a>
+                </div>
+                
+                <!-- Trust indicators -->
+                <div class="mt-12 flex items-center justify-center md:justify-start gap-6 text-blue-200 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-secondary"></i> 24/7 Support
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-secondary"></i> 99.9% Uptime
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-secondary"></i> No Data Caps
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image/Illustration -->
+            <div class="md:w-1/2 flex justify-center relative">
+                <!-- Decorative background elements -->
+                <div class="absolute w-72 h-72 bg-secondary/30 rounded-full blur-3xl -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                
+                <img src="https://placehold.co/600x400/1E40AF/FFFFFF?text=High+Speed+Network+Illustration" alt="High Speed Internet" class="rounded-2xl shadow-2xl border-4 border-white/10 w-full max-w-md object-cover transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                
+                <!-- Floating badge -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl flex items-center gap-4 animate-bounce">
+                    <div class="bg-green-100 p-3 rounded-full text-green-600">
+                        <i class="fa-solid fa-gauge-high text-2xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 font-semibold">Speeds Up To</p>
+                        <p class="text-xl font-bold text-dark">1 Gbps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <a href="#about" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/50 hover:text-white transition-colors flex flex-col items-center gap-2">
+            <span class="text-sm font-medium tracking-widest uppercase">Discover</span>
+            <i class="fa-solid fa-chevron-down animate-bounce"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative">
+                    <img src="https://placehold.co/600x500/F3F4F6/1E40AF?text=Our+Infrastructure" alt="About Sahani Digital" class="rounded-2xl shadow-lg relative z-10">
+                    <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-secondary/20 rounded-full z-0 blur-xl"></div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-primary/10 rounded-lg z-0"></div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h4 class="text-primary font-bold tracking-wider uppercase mb-2">About Us</h4>
+                    <h2 class="text-4xl font-extrabold text-dark mb-6">Empowering Your Digital Life</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        At Sahani Digital Cable, we believe that high-quality internet and entertainment should be accessible to everyone. Founded with a mission to bridge the digital divide, we provide robust fiber-optic broadband and premium digital TV services to homes and businesses.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Our commitment goes beyond just providing a connection. We strive for excellence in customer service, ensuring that our network is always reliable, and continually upgrading our infrastructure to bring you the fastest speeds possible.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-4 border-secondary pl-4">
+                            <p class="text-3xl font-bold text-dark mb-1">10k+</p>
+                            <p class="text-sm text-gray-500 font-medium">Happy Customers</p>
+                        </div>
+                        <div class="border-l-4 border-primary pl-4">
+                            <p class="text-3xl font-bold text-dark mb-1">99%</p>
+                            <p class="text-sm text-gray-500 font-medium">Network Coverage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h4 class="text-primary font-bold tracking-wider uppercase mb-2">Our Services</h4>
+                <h2 class="text-4xl font-extrabold text-dark mb-4">What We Offer</h2>
+                <p class="text-gray-600">Comprehensive digital solutions tailored for your home and business needs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">High-Speed Internet</h3>
+                    <p class="text-gray-600 mb-6">Experience blazing fast fiber-optic internet. Perfect for 4K streaming, online gaming, and remote work without interruptions.</p>
+                    <ul class="text-gray-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Symmetrical Speeds</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Free Wi-Fi Router</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-amber-50 text-secondary rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-tv"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Digital Cable TV</h3>
+                    <p class="text-gray-600 mb-6">Crystal clear picture quality with hundreds of channels. Catch your favorite sports, movies, and news in high definition.</p>
+                    <ul class="text-gray-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>HD Channels Included</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Interactive Guide</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-gray-50 text-gray-700 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-gray-800 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Business Solutions</h3>
+                    <p class="text-gray-600 mb-6">Dedicated leased lines and customized network solutions designed specifically to keep your business running smoothly.</p>
+                    <ul class="text-gray-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Dedicated IP Address</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Priority Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="plans" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h4 class="text-primary font-bold tracking-wider uppercase mb-2">Pricing Plans</h4>
+                <h2 class="text-4xl font-extrabold text-dark mb-4">Choose Your Connection</h2>
+                <p class="text-gray-600">Affordable packages designed to fit every household's needs. No hidden fees.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="plan-card bg-white rounded-3xl border border-gray-200 p-8 flex flex-col transition-all duration-300 relative overflow-hidden">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-gray-500 mb-2">Starter</h3>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-extrabold text-dark">Rs. 899</span>
+                            <span class="text-gray-500 font-medium">/mo</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Perfect for browsing and social media.</p>
+                    </div>
+                    <div class="mb-8 flex-grow">
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-secondary bg-amber-50 p-1 rounded-full text-sm"></i>
+                                <span class="font-semibold">30 Mbps Speed</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-secondary bg-amber-50 p-1 rounded-full text-sm"></i>
+                                <span class="text-gray-600">Unlimited Data</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-secondary bg-amber-50 p-1 rounded-full text-sm"></i>
+                                <span class="text-gray-600">Standard Router</span>
+                            </li>
+                            <li class="flex items-center gap-3 opacity-50">
+                                <i class="fa-solid fa-xmark text-gray-400 p-1 rounded-full text-sm"></i>
+                                <span class="text-gray-500">Cable TV Included</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block w-full py-3 px-6 text-center rounded-xl bg-gray-100 text-dark font-semibold hover:bg-gray-200 transition-colors">Select Plan</a>
+                </div>
+
+                <!-- Popular Plan -->
+                <div class="plan-card bg-primary rounded-3xl p-8 flex flex-col transition-all duration-300 relative transform md:-translate-y-4 shadow-2xl">
+                    <div class="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-3xl uppercase tracking-wider">
+                        Most Popular
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-blue-200 mb-2">Family Plus</h3>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-extrabold text-white">Rs. 1499</span>
+                            <span class="text-blue-200 font-medium">/mo</span>
+                        </div>
+                        <p class="text-sm text-blue-100 mt-2">Ideal for multiple devices & streaming.</p>
+                    </div>
+                    <div class="mb-8 flex-grow">
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-primary bg-white p-1 rounded-full text-sm"></i>
+                                <span class="font-semibold text-white">100 Mbps Speed</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-primary bg-white p-1 rounded-full text-sm"></i>
+                                <span class="text-blue-50">Unlimited Data</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-primary bg-white p-1 rounded-full text-sm"></i>
+                                <span class="text-blue-50">Dual-Band Gigabit Router</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-primary bg-white p-1 rounded-full text-sm"></i>
+                                <span class="text-blue-50">Free Cable TV (150+ Ch)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block w-full py-3 px-6 text-center rounded-xl bg-secondary text-white font-bold hover:bg-yellow-600 transition-colors shadow-lg">Select Plan</a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="plan-card bg-white rounded-3xl border border-gray-200 p-8 flex flex-col transition-all duration-300 relative overflow-hidden">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-gray-500 mb-2">Pro Gamer</h3>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-extrabold text-dark">Rs. 2499</span>
+                            <span class="text-gray-500 font-medium">/mo</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Ultimate speed for heavy users.</p>
+                    </div>
+                    <div class="mb-8 flex-grow">
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-secondary bg-amber-50 p-1 rounded-full text-sm"></i>
+                                <span class="font-semibold">300 Mbps Speed</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-secondary bg-amber-50 p-1 rounded-full text-sm"></i>
+                                <span class="text-gray-600">Unlimited Data</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-secondary bg-amber-50 p-1 rounded-full text-sm"></i>
+                                <span class="text-gray-600">Mesh Wi-Fi System</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-secondary bg-amber-50 p-1 rounded-full text-sm"></i>
+                                <span class="text-gray-600">Premium TV + OTT Apps</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block w-full py-3 px-6 text-center rounded-xl bg-gray-100 text-dark font-semibold hover:bg-gray-200 transition-colors">Select Plan</a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 text-sm text-gray-500">
+                * Prices are exclusive of applicable taxes. Installation charges may apply.
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-secondary relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-black opacity-10 rounded-full transform -translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to upgrade your internet experience?</h2>
+            <p class="text-yellow-100 text-lg mb-8">Switch to Sahani Digital Cable today and get free installation on all 6-month plans.</p>
+            <a href="tel:+9779802059652" class="inline-flex items-center justify-center gap-2 bg-white text-secondary px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg">
+                <i class="fa-solid fa-phone"></i> Call Now: +977 98020 59652
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-3xl shadow-xl overflow-hidden">
+                <!-- Contact Info -->
+                <div class="lg:w-2/5 bg-primary p-10 text-white relative overflow-hidden">
+                    <!-- Decor -->
+                    <div class="absolute bottom-0 right-0 w-40 h-40 bg-white/10 rounded-tl-full"></div>
+                    
+                    <h3 class="text-3xl font-bold mb-2 relative z-10">Get in Touch</h3>
+                    <p class="text-blue-200 mb-8 relative z-10">We'd love to hear from you. Fill out the form or use our contact details.</p>
+                    
+                    <div class="space-y-6 relative z-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Our Office</h4>
+                                <p class="text-blue-100">123 Main Market Road,<br>City Center, District 456789</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Email Us</h4>
+                                <p class="text-blue-100">info@sahanidigitalcable.com.np</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Call/WhatsApp Us</h4>
+                                <p class="text-blue-100">+977 9802059652</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="mt-12 flex gap-4 relative z-10">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:w-3/5 p-10">
+                    <h3 class="text-2xl font-bold text-dark mb-6">Send us a Message</h3>
+                    <form id="contactForm" onsubmit="event.preventDefault(); submitForm();">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="+91 98765 43210" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Interested Service</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors bg-white">
+                                <option value="internet">High-Speed Internet</option>
+                                <option value="tv">Digital Cable TV</option>
+                                <option value="combo">Internet + TV Combo</option>
+                                <option value="support">Technical Support</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-lg transition-colors flex justify-center items-center gap-2">
+                            <span>Submit Request</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="successMessage" class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded-lg flex items-center gap-3 border border-green-200">
+                        <i class="fa-solid fa-circle-check text-xl"></i>
+                        <p>Thank you! Your request has been sent. We will contact you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-secondary text-white p-1.5 rounded-lg">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">SAHANI</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Connecting communities with high-speed internet and premium digital entertainment since 2010.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-secondary transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-secondary transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-secondary transition-colors">Services</a></li>
+                        <li><a href="#plans" class="hover:text-secondary transition-colors">Pricing Plans</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-secondary transition-colors">Customer Portal</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Speed Test</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Newsletter</h4>
+                    <p class="text-sm text-gray-400 mb-2">Subscribe for latest offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email address" class="px-3 py-2 bg-gray-800 border-none rounded-l-md w-full focus:outline-none focus:ring-1 focus:ring-secondary text-sm">
+                        <button class="bg-secondary px-3 py-2 rounded-r-md text-white hover:bg-yellow-600 transition-colors"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 Sahani Digital Cable. All rights reserved.</p>
+                <p>Designed with <i class="fa-solid fa-heart text-red-500"></i> for fast connections.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/9779802059652" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition-all hover:scale-110 animate-bounce cursor-pointer">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        const logoText1 = document.getElementById('logo-text-1');
+        const logoText2 = document.getElementById('logo-text-2');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md');
+                navbar.classList.remove('bg-transparent');
+                
+                logoText1.classList.remove('text-white');
+                logoText1.classList.add('text-primary');
+                logoText2.classList.remove('text-gray-300');
+                logoText2.classList.add('text-gray-500');
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-700');
+                });
+                mobileBtn.classList.remove('text-white');
+                mobileBtn.classList.add('text-primary');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+                
+                logoText1.classList.add('text-white');
+                logoText1.classList.remove('text-primary');
+                logoText2.classList.add('text-gray-300');
+                logoText2.classList.remove('text-gray-500');
+
+                navLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-700');
+                });
+                mobileBtn.classList.add('text-white');
+                mobileBtn.classList.remove('text-primary');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form submission email trigger
+        function submitForm() {
+            const form = document.getElementById('contactForm');
+            const successMsg = document.getElementById('successMessage');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            const originalContent = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Preparing Email...';
+
+            // Construct mailto link with customer data
+            const emailTo = "info@sahanidigitalcable.com.np";
+            const subject = encodeURIComponent("New Connection Request from " + name);
+            const body = encodeURIComponent(
+                "Customer Details for New Connection:\n\n" +
+                "Name: " + name + "\n" +
+                "Phone: " + phone + "\n" +
+                "Service Interested: " + service + "\n" +
+                "Message: " + message
+            );
+            
+            // Trigger email client
+            window.location.href = "mailto:" + emailTo + "?subject=" + subject + "&body=" + body;
+
+            // Simulate UI success after a short delay
+            setTimeout(() => {
+                form.reset();
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+                
+                // Reset form after a few seconds
+                setTimeout(() => {
+                    successMsg.classList.add('hidden');
+                    form.classList.remove('hidden');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalContent;
+                }, 5000);
+            }, 1000);
+        }
+
+        // Active link highlighting on scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('text-secondary', 'font-bold');
+                if (item.getAttribute('href').substring(1) === current) {
+                    item.classList.add('text-secondary');
+                    // Only add bold if navbar is white to stand out
+                    if(window.scrollY > 50) item.classList.add('font-bold');
+                }
+            });
+        });
+    </script>
+</body>
+  </html>

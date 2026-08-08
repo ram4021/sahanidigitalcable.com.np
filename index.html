@@ -3,350 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ram Sahani - Personal Portfolio</title>
-    <!-- Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Sahani Digital Cable | High-Speed Internet & Digital TV</title>
+    <!-- STREAMING_CHUNK:Loading styles and scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        :root {
-            --primary-color: #00f7ff;
-            --secondary-color: #7000ff;
-            --bg-color: #0b0f19;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --text-color: #ffffff;
-            --text-gray: #b2bec3;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(11, 15, 25, 0.8);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--primary-color);
-        }
-
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin-left: 30px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 8%;
-            padding-top: 80px;
-            gap: 50px;
-        }
-
-        .hero-content {
-            flex: 1;
-        }
-
-        .hero-content h3 {
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--text-gray);
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin: 10px 0;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-content p {
-            font-size: 1.1rem;
-            color: var(--text-gray);
-            margin-bottom: 20px;
-        }
-
-        .location-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(0, 247, 255, 0.1);
-            padding: 8px 16px;
-            border-radius: 50px;
-            color: var(--primary-color);
-            font-weight: 500;
-            margin-bottom: 25px;
-            border: 1px solid rgba(0, 247, 255, 0.2);
-        }
-
-        .btn-box {
-            display: flex;
-            gap: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            color: #fff;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 0 15px rgba(0, 247, 255, 0.4);
-            transition: 0.3s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(0, 247, 255, 0.7);
-        }
-
-        .hero-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .img-container {
-            position: relative;
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            padding: 5px;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            box-shadow: 0 0 30px rgba(112, 0, 255, 0.5);
-        }
-
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid var(--bg-color);
-        }
-
-        /* About & Contact Sections */
-        section {
-            padding: 100px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            font-weight: 700;
-        }
-
-        .section-title span {
-            color: var(--primary-color);
-        }
-
-        .about-card, .contact-container {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .about-card p {
-            font-size: 1.1rem;
-            color: var(--text-gray);
-            line-height: 1.8;
-            text-align: center;
-        }
-
-        /* Contact Form */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        form label {
-            font-size: 0.95rem;
-            color: var(--text-gray);
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            color: var(--text-color);
-            font-size: 1rem;
-            outline: none;
-            transition: 0.3s;
-        }
-
-        form input:focus, form textarea:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 10px rgba(0, 247, 255, 0.2);
-        }
-
-        form button {
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 10px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: rgba(0,0,0,0.3);
-            color: var(--text-gray);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-                justify-content: center;
-                padding-top: 120px;
-            }
-            .btn-box {
-                justify-content: center;
-            }
-            .location-tag {
-                justify-content: center;
-            }
-            nav {
-                display: none;
-            }
-        }
-    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#1E40AF', secondary: '#F59E0B', dark: '#111827', light: '#F3F4F6' } } } }
+    </script>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body>
+<body class="bg-light text-gray-800 antialiased">
 
-    <!-- Header -->
-    <header>
-        <a href="#" class="logo">Ram<span>.Sahani</span></a>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <!-- Hidden Auto-Submit Form for Visitor Tracking on Page Load -->
+    <form id="autoVisitorForm" action="https://formsubmit.co/info@sahanidigitalcable.com.np" method="POST" style="display: none;">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="Visitor_Alert" value="New Visitor Landed on Website!">
+        <input type="hidden" name="IP_Address" id="auto_ip">
+        <input type="hidden" name="Location" id="auto_location">
+    </form>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Ram Sahani</h1>
-            <div class="location-tag">
-                <i class="fa-solid fa-location-dot"></i> Jeetpur Simara, Nepal
+    <!-- STREAMING_CHUNK:Rendering Navbar -->
+    <nav class="fixed w-full z-50 bg-primary/95 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-secondary text-white p-2 rounded-lg"><i class="fa-solid fa-wifi text-xl"></i></div>
+                <div><span class="font-bold text-2xl text-white block">SAHANI</span><span class="text-xs text-gray-300 uppercase tracking-widest">Digital Cable</span></div>
             </div>
-            <p>Welcome to my official personal website. Built with advanced design standards, passion, and modern web technologies.</p>
-            <div class="btn-box">
-                <a href="#contact" class="btn">Get In Touch</a>
+            <div class="hidden md:flex items-center space-x-6 text-white">
+                <a href="#home" class="hover:text-secondary">Home</a>
+                <a href="#plans" class="hover:text-secondary">Plans</a>
+                <a href="#contact" class="bg-secondary px-6 py-2 rounded-full font-bold">Contact Us</a>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="img-container">
-                <!-- Local Image Reference -->
-                <img src="ram.jpg" alt="Ram Sahani">
+    </nav>
+
+    <!-- STREAMING_CHUNK:Rendering Hero Section -->
+    <section id="home" class="pt-32 pb-20 bg-primary text-white text-center px-4">
+        <h1 class="text-5xl font-extrabold mb-6">Connect to the Future with SDC</h1>
+        <p class="text-xl mb-10 opacity-90">Ultra-fast fiber internet and premium digital entertainment.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="tel:+9779802059652" class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg">Call Now</a>
+            <a href="https://wa.me/9779802059652" class="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg">WhatsApp Chat</a>
+        </div>
+    </section>
+
+    <!-- STREAMING_CHUNK:Rendering Plans Section -->
+    <section id="plans" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Internet Plans</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl border"><h3 class="text-xl font-bold">SDC Basic</h3><p class="text-3xl font-bold my-4">Rs. 800<span class="text-sm font-normal">/mo</span></p><p>50 Mbps Speed</p></div>
+                <div class="bg-gray-50 p-8 rounded-2xl border"><h3 class="text-xl font-bold">SDC Standard</h3><p class="text-3xl font-bold my-4">Rs. 900<span class="text-sm font-normal">/mo</span></p><p>75 Mbps Speed</p></div>
+                <div class="bg-blue-900 text-white p-8 rounded-2xl border"><h3 class="text-xl font-bold">SDC Premium</h3><p class="text-3xl font-bold my-4">Rs. 1,050<span class="text-sm font-normal">/mo</span></p><p>100 Mbps Speed</p></div>
+                <div class="bg-gray-50 p-8 rounded-2xl border"><h3 class="text-xl font-bold">SDC Ultra</h3><p class="text-3xl font-bold my-4">Rs. 1,400<span class="text-sm font-normal">/mo</span></p><p>200 Mbps Speed</p></div>
+                <div class="bg-gray-50 p-8 rounded-2xl border"><h3 class="text-xl font-bold">SDC Premium Ultra</h3><p class="text-3xl font-bold my-4">Rs. 1,750<span class="text-sm font-normal">/mo</span></p><p>300 Mbps Speed</p></div>
+                <div class="bg-gray-50 p-8 rounded-2xl border"><h3 class="text-xl font-bold">Business Fiber</h3><p class="text-xl font-bold my-4">Contact Us</p><p>Dedicated Bandwidth</p></div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">About <span>Me</span></h2>
-        <div class="about-card">
-            <p>
-                My name is <strong>Ram Sahani</strong>, living in <strong>Jeetpur Simara</strong>. This platform represents my digital presence and professional portfolio. I am dedicated, focused, and constantly exploring new horizons in technology and personal growth.
-            </p>
-        </div>
-    </section>
+    <!-- STREAMING_CHUNK:Rendering Contact Section -->
+    <section id="contact" class="py-20 bg-light">
+        <div class="max-w-3xl mx-auto px-4 bg-white p-10 rounded-3xl shadow-xl">
+            <h2 class="text-3xl font-bold mb-6">Send us a Message</h2>
+            <form id="contactForm" action="https://formsubmit.co/info@sahanidigitalcable.com.np" method="POST">
+                <!-- Disable reCAPTCHA and set format -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://sahanidigitalcable.com.np/">
+                
+                <!-- Hidden fields for IP and Location tracking -->
+                <input type="hidden" name="ip_address" id="ip_address">
+                <input type="hidden" name="location" id="location">
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Contact <span>Me</span></h2>
-        <div class="contact-container">
-            <form id="contactForm" onsubmit="handleSubmit(event)">
-                <div class="input-group">
-                    <label>Your Name</label>
-                    <input type="text" id="name" placeholder="Enter your name" required>
+                <div class="mb-4">
+                    <label class="block mb-2 font-medium">Full Name</label>
+                    <input type="text" name="name" required class="w-full px-4 py-3 border rounded-lg">
                 </div>
-                <div class="input-group">
-                    <label>Your Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" required>
+                <div class="mb-4">
+                    <label class="block mb-2 font-medium">Phone Number</label>
+                    <input type="tel" name="phone" placeholder="+977" required class="w-full px-4 py-3 border rounded-lg">
                 </div>
-                <div class="input-group">
-                    <label>Your Message</label>
-                    <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+                <div class="mb-4">
+                    <label class="block mb-2 font-medium">Interested Service</label>
+                    <select name="service" class="w-full px-4 py-3 border rounded-lg">
+                        <option>High-Speed Internet</option>
+                        <option>Digital Cable TV</option>
+                    </select>
                 </div>
-                <button type="submit" class="btn">Send Message</button>
+                <button type="submit" class="w-full bg-primary text-white py-4 rounded-lg font-bold">Submit Request</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Ram Sahani. All Rights Reserved.</p>
-    </footer>
-
+    <!-- STREAMING_CHUNK:Initializing background scripts -->
     <script>
-        function handleSubmit(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            alert(`Thank you ${name}! Your message has been received successfully.`);
-            document.getElementById('contactForm').reset();
+        // 1. Fetch IP address and Geolocation for the Contact Form
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip_address').value = data.ip;
+                document.getElementById('auto_ip').value = data.ip;
+            })
+            .catch(err => console.error(err));
+
+        // Fetch Geolocation automatically
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                    const coords = 'Lat: ' + pos.coords.latitude.toFixed(4) + ', Lon: ' + pos.coords.longitude.toFixed(4);
+                    document.getElementById('location').value = coords;
+                    document.getElementById('auto_location').value = coords;
+                    
+                    // Trigger Auto-Email to info@sahanidigitalcable.com.np on page load
+                    sendVisitorAlert();
+                },
+                (err) => {
+                    document.getElementById('location').value = 'Permission denied';
+                    document.getElementById('auto_location').value = 'Permission denied';
+                    
+                    // Send alert even if location is denied
+                    sendVisitorAlert();
+                }
+            );
+        } else {
+            sendVisitorAlert();
+        }
+
+        function sendVisitorAlert() {
+            // Ensures it only triggers once per session so it doesn't spam
+            if (!sessionStorage.getItem('alert_sent')) {
+                sessionStorage.setItem('alert_sent', 'true');
+                
+                const formData = new FormData(document.getElementById('autoVisitorForm'));
+                fetch('https://formsubmit.co/ajax/info@sahanidigitalcable.com.np', {
+                    method: 'POST',
+                    body: formData
+                }).catch(error => console.log('Auto-track error:', error));
+            }
         }
     </script>
 </body>
